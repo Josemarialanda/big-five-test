@@ -28,11 +28,14 @@ executable big-five-test-exe
   import:         common-options
   hs-source-dirs: src
   main-is:        Main.hs
+  other-modules:  Utils.Utils,
+                  Utils.Types,
+                  Parser,
+                  Types
   ghc-options:    -threaded -rtsopts -with-rtsopts=-N
   build-depends:  aeson
                 , regex-tdfa
                 , split
                 , text
-                , HList
-                , first-class-families
+                , req
                   
