@@ -6,6 +6,15 @@
 
 ## Usage
 
+### Build:
+```bash
+$ nix build
+```
+### Help
+```bash
+$ nix run .#exe -- --help
+```
+
 ### Run and print results:
 ```bash
 $ nix run .#exe -- "res/big5test.txt" "Jose Maria Landa Chavez" "josemaria.landa@gmail.com"
