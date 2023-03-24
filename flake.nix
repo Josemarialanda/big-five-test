@@ -25,6 +25,7 @@
             withHoogle = true;
             packages = p: [ p.big-five-test ];
             buildInputs = [
+              hspkgs.zlib
               hspkgs.cabal-install
               hspkgs.haskell-language-server
               hspkgs.hlint
