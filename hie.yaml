@@ -1,0 +1,6 @@
+cradle:
+  multi:
+    # - path: "ignore/"
+    #   config: {cradle: {none: }}
+    - path: "src"
+      config: {cradle: {cabal: {component: "big-five-test:big-five-test-exe"}}}
