@@ -24,7 +24,7 @@ common common-options
                       PolyKinds
   ghc-options:
 
-executable big-five-test-exe
+executable big-five-test
   import:         common-options
   hs-source-dirs: src
   main-is:        Main.hs

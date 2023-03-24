@@ -34,16 +34,7 @@
             ];
           };
           defaultPackage = pkgs.big-five-test;
-          apps.uploadResults = inputs.flake-utils.lib.mkApp { drv = pkgs.writeShellScriptBin "uploadResults" 
-          ''
-            ${pkgs.big-five-test}/bin/big-five-test-exe "res/big5test.txt" "Jose Maria Landa Chavez" "josemaria.landa@gmail.com"
-            curl --header "Content-Type: application/json" \
-              --request POST \
-              --data @results.json \
-              https://recruiting.bellroy.com/api/v1/roles/bellroy-tech-team-recruit/big_five_profile_submissions
-          '' 
-          ; 
-          };
+          apps.exe = inputs.flake-utils.lib.mkApp { drv = pkgs.big-five-test; };
         };
     in
     { inherit overlay; } // 
